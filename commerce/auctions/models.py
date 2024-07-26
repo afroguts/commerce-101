@@ -7,17 +7,17 @@ class User(AbstractUser):
 
     pass
 
-class auction_listings(models.Model):
-   name = models.CharField(max_length=100) 
+class Auction_item(models.Model):
+   item_name = models.CharField(max_length=100)
    description = models.CharField(max_length=700)
-
+   User = models.ForeignKey(User, related_name='item_name', on_delete=models.CASCADE)
 
    pass
 
 
 class bids(models.Model):
-    reference = models.IntegerField()
     bid = models.IntegerField()
+    auction_item= models.ForeignKey(Auction_item, related_name='bid', on_delete=models.CASCADE)
     pass
 
 class comments(models.Model):

@@ -3,11 +3,18 @@
 {% block body %}
     <h2>New Listing</h2>
 <form action="new_listing" method="post">
-    <label for="your_name">Your name: </label>
-    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-    <input type="submit" value="OK">
+    <label for="P_name">Product name: </label>
+    <input id="P_name" type="text" name="P_name" value="{{ p_name }}"> <br>
+    <label for="P_descr">Description: </label>
+    <input id="P_descr" type="text" name="P_descr" value="{{ p_descr }}"> <br>
+    <label for="P_bid">Starting Bid: </label>
+    <input id="P_bid" type="number" name="P_bid" value="{{ p_bid }}"> $ <br>
+    <label for="P_image">Product Image: </label>
+    <input id="P_image" type="url" name="P_image" value="{{ p_image }}"> <br>
+    <label for="P_categ">Product Categorie: </label>
+    <input id="P_categ" type="url" name="P_categ" value="{{ p_categ }}"> <br>
+    <input type="submit" value="Save">
 </form>
 
 
-    TODO
 {% endblock %}
