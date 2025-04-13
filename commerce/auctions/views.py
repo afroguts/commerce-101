@@ -4,6 +4,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
+
+
+from .models import Product
 from .models import User
 
 
@@ -63,4 +66,6 @@ def register(request):
         return render(request, "auctions/register.html")
 
 def new_listing(request):
+    #listings = Listing.objects.all()  # Fetch all listings
+    #   context = {'listings': listings}
     return render(request, "auctions/new_listing.html")
